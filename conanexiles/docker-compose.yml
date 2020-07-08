@@ -11,15 +11,17 @@ services:
       - "CONANEXILES_Engine_OnlineSubSystemSteam_ServerName=${SERVER_NAME}"
       - "CONANEXILES_Engine_OnlineSubSystemSteam_ServerPassword=${SERVER_PW}"
       - "CONANEXILES_INSTANCENAME=exiles0"
-      - "CONANEXILES_PORT=7877"
+      - "CONANEXILES_PORT=7777"
       - "CONANEXILES_QUERYPORT=28015"
+      - "CONANEXILES_SERVER_TYPE=pve"
+      - "CONANEXILES_ServerSettings_ServerSettings_MinPurgeOnlinePlayers=3"
       - "CONANEXILES_Game_RconPlugin_RconEnabled=1"
       - "CONANEXILES_Game_RconPlugin_RconPassword=REDACTED"
       - "CONANEXILES_Game_RconPlugin_RconPort=25575"
       - "CONANEXILES_Game_RconPlugin_RconMaxKarma=60"
     ports:
-        - 7877:7877/udp
-        - 7878:7878/udp
+        - 7877:7777/udp
+        - 7878:7778/udp
         - 28015:28015/udp
     volumes:
         - data:/conanexiles
